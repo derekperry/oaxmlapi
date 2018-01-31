@@ -234,8 +234,8 @@ class Request(object):
         Return a string containing XML tags.
 
         """
-        header = u'<?xml version="1.0" encoding="utf-8" standalone="yes"?>'
-        return '{}{}'.format(header, ET.tostring(self.request(), encoding='unicode').decode('utf-8'))
+        header = '<?xml version="1.0" encoding="utf-8" standalone="yes"?>'
+        return '{}{}'.format(header, ET.tostring(self.request(), encoding='unicode'))
 
     def prettify(self):
         """
