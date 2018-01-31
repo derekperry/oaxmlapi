@@ -238,7 +238,7 @@ class Request(object):
 
         """
         header = u'<?xml version="1.0" encoding="utf-8" standalone="yes"?>'
-        return header + ET.tostring(self.request(), encoding='unicode')
+        return '{}{}'.format(header, ET.tostring(self.request(), encoding='unicode'))
 
     def prettify(self):
         """
