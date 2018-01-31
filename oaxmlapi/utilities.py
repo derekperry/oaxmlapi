@@ -73,7 +73,7 @@ def elem2dict(elem, strip=True):
 
     """
     d = {}
-    for key, value in elem.attrib.items():
+    for key, value in list(elem.attrib.items()):
         d['@'+key] = value
 
     # loop over subelements to merge them
