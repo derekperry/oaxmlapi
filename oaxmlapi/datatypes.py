@@ -4,10 +4,7 @@
 from xml.dom import minidom
 from oaxmlapi.utilities import ADDRESS_FIELDS
 
-try:
-    import xml.etree.cElementTree as ET
-except ImportError:
-    import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET
 
 
 class Datatype(object):
