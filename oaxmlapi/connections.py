@@ -75,7 +75,7 @@ class Auth(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.auth(), 'utf-8')
+        return ET.tostring(self.auth(), encoding='unicode')
 
     def prettify(self):
         """
@@ -83,7 +83,7 @@ class Auth(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
 
 class RemoteAuth(object):
@@ -131,7 +131,7 @@ class RemoteAuth(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.remoteauth(), 'utf-8')
+        return ET.tostring(self.remoteauth(), encoding='unicode')
 
     def prettify(self):
         """
@@ -139,7 +139,7 @@ class RemoteAuth(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
 
 class Whoami(object):
@@ -173,7 +173,7 @@ class Whoami(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.whoami(), 'utf-8')
+        return ET.tostring(self.whoami(), encoding='unicode')
 
     def prettify(self):
         """
@@ -181,7 +181,7 @@ class Whoami(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
 
 class Request(object):
@@ -238,7 +238,7 @@ class Request(object):
 
         """
         header = '<?xml version="1.0" encoding="utf-8" standalone="yes"?>'
-        return header + ET.tostring(self.request(), 'utf-8')
+        return header + ET.tostring(self.request(), encoding='unicode')
 
     def prettify(self):
         """
@@ -246,4 +246,4 @@ class Request(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')

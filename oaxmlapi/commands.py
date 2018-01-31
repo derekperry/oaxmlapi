@@ -35,7 +35,7 @@ class Time(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.time(), 'utf-8')
+        return ET.tostring(self.time(), encoding='unicode')
 
 
 class Read(object):
@@ -113,7 +113,7 @@ class Read(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.read(), 'utf-8')
+        return ET.tostring(self.read(), encoding='unicode')
 
     def prettify(self):
         """
@@ -121,7 +121,7 @@ class Read(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
     class Filter(object):
         """
@@ -196,7 +196,7 @@ class Report(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.getReport(), 'utf-8')
+        return ET.tostring(self.getReport(), encoding='unicode')
 
     def prettify(self):
         """
@@ -204,7 +204,7 @@ class Report(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
 
 class Add(object):
@@ -264,7 +264,7 @@ class Add(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.add(), 'utf-8')
+        return ET.tostring(self.add(), encoding='unicode')
 
     def prettify(self):
         """
@@ -272,7 +272,7 @@ class Add(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
 
 class Delete(object):
@@ -308,7 +308,7 @@ class Delete(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.delete(), 'utf-8')
+        return ET.tostring(self.delete(), encoding='unicode')
 
     def prettify(self):
         """
@@ -316,7 +316,7 @@ class Delete(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
 
 class Modify(object):
@@ -359,7 +359,7 @@ class Modify(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.modify(), 'utf-8')
+        return ET.tostring(self.modify(), encoding='unicode')
 
     def prettify(self):
         """
@@ -367,7 +367,7 @@ class Modify(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
 
 class Submit(object):
@@ -417,7 +417,7 @@ class Submit(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.submit(), 'utf-8')
+        return ET.tostring(self.submit(), encoding='unicode')
 
     def prettify(self):
         """
@@ -425,7 +425,7 @@ class Submit(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
 
 class CreateAccount(object):
@@ -489,7 +489,7 @@ class CreateAccount(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.create(), 'utf-8')
+        return ET.tostring(self.create(), encoding='unicode')
 
     def prettify(self):
         """
@@ -497,7 +497,7 @@ class CreateAccount(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
 
 class CreateUser(object):
@@ -559,7 +559,7 @@ class CreateUser(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.create(), 'utf-8')
+        return ET.tostring(self.create(), encoding='unicode')
 
     def prettify(self):
         """
@@ -567,7 +567,7 @@ class CreateUser(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
 
 class Switch(object):
@@ -601,7 +601,7 @@ class Switch(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.switch(), 'utf-8')
+        return ET.tostring(self.switch(), encoding='unicode')
 
     def prettify(self):
         """
@@ -663,7 +663,7 @@ class MakeURL(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.makeurl(), 'utf-8')
+        return ET.tostring(self.makeurl(), encoding='unicode')
 
     def prettify(self):
         """
@@ -671,7 +671,7 @@ class MakeURL(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
 
 
 class Error(object):
@@ -720,7 +720,7 @@ class Error(object):
 
         """
         header = '<?xml version="1.0" encoding="utf-8" standalone="yes"?>'
-        return header + ET.tostring(self.error(), 'utf-8')
+        return header + ET.tostring(self.error(), encoding='unicode')
 
     def prettify(self):
         """
@@ -728,4 +728,4 @@ class Error(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')

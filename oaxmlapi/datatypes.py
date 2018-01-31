@@ -66,7 +66,7 @@ class Datatype(object):
         Return a string containing XML tags.
 
         """
-        return ET.tostring(self.getDatatype(), 'utf-8')
+        return ET.tostring(self.getDatatype(), encoding='unicode')
 
     def prettify(self):
         """
@@ -74,4 +74,4 @@ class Datatype(object):
 
         """
         reparsed = minidom.parseString(self.tostring())
-        return reparsed.toprettyxml(indent='  ', encoding='utf-8')
+        return reparsed.toprettyxml(indent='  ', encoding='unicode')
